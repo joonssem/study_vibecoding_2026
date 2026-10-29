@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>다음 단계 | 화요일 바이브코딩</title>
+  <meta name="description" content="GitHub Pages로 되는 것과 안 되는 것, 다음 길 안내입니다.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <div class="inner">
+      <a class="site-title" href="index.html">화요일 바이브코딩</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">메뉴</button>
+      <nav class="site-nav" id="site-nav" aria-label="주 메뉴">
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="schedule.html">일정</a></li>
+        <li><a href="week1.html">1회차</a></li>
+        <li><a href="week2.html">2회차</a></li>
+        <li><a href="week3.html">3회차</a></li>
+        <li><a href="tools.html">도구</a></li>
+        <li><a href="deploy.html">배포 가이드</a></li>
+        <li><a href="troubleshoot.html">문제 해결</a></li>
+        <li><a href="principles.html">원칙</a></li>
+        <li><a href="next-steps.html" aria-current="page">다음 단계</a></li>
+        <li><a href="support.html">사후 지원</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+    <h1>다음 단계</h1>
+    <p class="lead">GitHub Pages는 <b>정적 파일</b>만 올립니다. 앱이 아래 상태가 되면 Pages를 넘어서는 것입니다.</p>
+
+    <div class="table-wrap"><table>
+<thead><tr><th>신호</th><th>Pages로 되는가</th><th>다음 길</th></tr></thead>
+<tbody>
+<tr><td>정적 화면, 키·학생 정보 없음</td><td>된다</td><td>그대로 사용</td></tr>
+<tr><td>여러 사람이 같은 데이터를 봐야 함</td><td>안 된다</td><td>구글 시트 + 앱스 스크립트 등 (방향만 소개)</td></tr>
+<tr><td>앱에 AI 기능(API 키)을 넣고 싶다</td><td><b>안 된다</b> (코드가 공개되므로 키를 둘 수 없음)</td><td>서버 쪽을 거치는 구조가 필요합니다. 연수에서는 경고만 합니다.</td></tr>
+<tr><td>코드 수정이 잦다</td><td>된다</td><td>안티그래비티 등 편집 도구</td></tr>
+</tbody>
+</table></div>
+
+    <div class="notice warn"><strong>API 키는 절대 코드에 넣지 마세요</strong>
+    AI 기능을 넣고 싶어도 키를 <code>index.html</code>에 적으면 누구나 볼 수 있습니다. 필요하다면 그 방법은 연수 후 따로 상의합니다.</div>
+    <div class="notice warn"><strong>꼭 지켜 주세요</strong>
+학생 개인정보(이름·번호·평가 결과)와 API 키·비밀번호는 앱 코드와 저장소에 넣지 않습니다.
+GitHub Pages는 <b>공개 주소</b>이고, 배포하면 코드 전체가 누구에게나 보입니다.</div>
+    <div class="pager"><a href="week3.html">← 3회차</a><a href="support.html">사후 지원 →</a></div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="inner">화요일 바이브코딩 · 학교 동료 교사 연수 안내 · 이 사이트는 공개 주소입니다. 참가자 정보와 학생 정보는 담지 않습니다.</div>
+  </footer>
+</body>
+</html>

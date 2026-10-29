@@ -1,0 +1,151 @@
+/* 디자인 값은 모두 :root의 변수에 모아 둔다.
+   연수 중 디자인 투표 후 이 블록의 값만 바꾸면 전체 모습이 바뀐다. */
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f3f6fb;
+  --color-text: #1b2333;
+  --color-muted: #4a5568;
+  --color-primary: #1d3a6e;
+  --color-primary-text: #ffffff;
+  --color-border: #cfd8e6;
+  --color-warn-bg: #fff4e0;
+  --color-warn-border: #d98200;
+  --color-code-bg: #1e2433;
+  --color-code-text: #f1f4fa;
+  --font-body: "Pretendard", "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+  --font-code: Consolas, "D2Coding", "Courier New", monospace;
+  --font-size: 1.0625rem; /* 17px */
+  --radius: 10px;
+  --max-width: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size);
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+a { color: var(--color-primary); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--color-warn-border); outline-offset: 2px; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--color-primary); color: var(--color-primary-text);
+  padding: 8px 14px; z-index: 20;
+}
+.skip-link:focus { left: 0; }
+
+/* 머리말과 내비게이션 */
+.site-header {
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+.site-header .inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  flex-wrap: wrap;
+}
+.site-title {
+  color: var(--color-primary-text);
+  font-weight: 700; font-size: 1.15rem; text-decoration: none;
+}
+.nav-toggle {
+  display: none;
+  background: transparent; color: var(--color-primary-text);
+  border: 1px solid rgba(255,255,255,.7); border-radius: 8px;
+  padding: 6px 12px; font: inherit; cursor: pointer;
+}
+.site-nav { width: 100%; }
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.site-nav a {
+  display: inline-block; padding: 6px 2px;
+  color: var(--color-primary-text); text-decoration: none; font-size: .95rem;
+}
+.site-nav a:hover { text-decoration: underline; }
+.site-nav a[aria-current="page"] { font-weight: 700; text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .nav-toggle { display: inline-block; }
+  .site-nav { display: none; }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; gap: 0; }
+  .site-nav a { display: block; padding: 10px 2px; border-top: 1px solid rgba(255,255,255,.25); }
+}
+
+/* 본문 */
+main { max-width: var(--max-width); margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 1.75rem; line-height: 1.35; margin: 0 0 8px; }
+h2 { font-size: 1.35rem; line-height: 1.4; margin: 2.2rem 0 .6rem; padding-bottom: 6px; border-bottom: 2px solid var(--color-border); }
+h3 { font-size: 1.1rem; margin: 1.6rem 0 .4rem; }
+p, ul, ol { margin: .6rem 0; }
+li { margin: .3rem 0; }
+.lead { font-size: 1.15rem; color: var(--color-muted); margin-bottom: 1.2rem; }
+.muted { color: var(--color-muted); }
+.tbd { background: #ffe9a8; color: #5a3d00; padding: 0 6px; border-radius: 4px; font-weight: 700; }
+
+/* 안내 상자 */
+.notice {
+  background: var(--color-surface);
+  border-left: 5px solid var(--color-primary);
+  border-radius: var(--radius);
+  padding: 12px 16px; margin: 1.2rem 0;
+}
+.notice.warn { background: var(--color-warn-bg); border-left-color: var(--color-warn-border); }
+.notice strong:first-child { display: block; margin-bottom: 2px; }
+
+/* 카드 */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 1rem 0; padding: 0; list-style: none; }
+.card {
+  display: block; text-decoration: none; color: var(--color-text);
+  border: 1px solid var(--color-border); border-radius: var(--radius);
+  padding: 14px 16px; background: var(--color-bg);
+}
+.card:hover { border-color: var(--color-primary); background: var(--color-surface); }
+.card b { display: block; color: var(--color-primary); font-size: 1.1rem; }
+.card span { font-size: .95rem; color: var(--color-muted); }
+
+/* 표: 좁은 화면에서는 표 안에서만 가로 스크롤 */
+.table-wrap { overflow-x: auto; margin: 1rem 0; border: 1px solid var(--color-border); border-radius: var(--radius); }
+table { border-collapse: collapse; width: 100%; font-size: .98rem; }
+th, td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--color-border); }
+th { background: var(--color-surface); white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.time { white-space: nowrap; font-weight: 700; }
+
+/* 번호 단계 */
+ol.steps { padding-left: 1.4rem; }
+ol.steps > li { margin: .8rem 0; padding-left: .2rem; }
+
+/* 코드 */
+code { font-family: var(--font-code); background: var(--color-surface); padding: 1px 6px; border-radius: 5px; font-size: .95em; }
+.codeblock { position: relative; margin: 1rem 0; }
+.codeblock pre {
+  margin: 0; padding: 16px; overflow-x: auto;
+  background: var(--color-code-bg); color: var(--color-code-text);
+  border-radius: var(--radius); font-family: var(--font-code); font-size: .92rem; line-height: 1.6;
+  white-space: pre; word-break: normal;
+}
+.codeblock pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
+.copy-btn {
+  position: absolute; top: 8px; right: 8px;
+  background: var(--color-primary-text); color: var(--color-primary);
+  border: 0; border-radius: 6px; padding: 5px 12px; font: inherit; font-size: .88rem; font-weight: 700; cursor: pointer;
+}
+
+/* 회차 이동 */
+.pager { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 2.4rem; }
+.pager a { display: inline-block; padding: 9px 16px; border: 1px solid var(--color-primary); border-radius: var(--radius); text-decoration: none; font-weight: 700; }
+
+.site-footer { border-top: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-muted); font-size: .92rem; }
+.site-footer .inner { max-width: var(--max-width); margin: 0 auto; padding: 16px; }

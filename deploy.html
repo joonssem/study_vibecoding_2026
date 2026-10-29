@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>배포 가이드 | 화요일 바이브코딩</title>
+  <meta name="description" content="GitHub Pages로 index.html을 공개 주소에 올리는 7단계입니다.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <div class="inner">
+      <a class="site-title" href="index.html">화요일 바이브코딩</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">메뉴</button>
+      <nav class="site-nav" id="site-nav" aria-label="주 메뉴">
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="schedule.html">일정</a></li>
+        <li><a href="week1.html">1회차</a></li>
+        <li><a href="week2.html">2회차</a></li>
+        <li><a href="week3.html">3회차</a></li>
+        <li><a href="tools.html">도구</a></li>
+        <li><a href="deploy.html" aria-current="page">배포 가이드</a></li>
+        <li><a href="troubleshoot.html">문제 해결</a></li>
+        <li><a href="principles.html">원칙</a></li>
+        <li><a href="next-steps.html">다음 단계</a></li>
+        <li><a href="support.html">사후 지원</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+    <h1>배포 가이드</h1>
+    <p class="lead">GitHub Pages로 내 <code>index.html</code>을 공개 주소로 올립니다.</p>
+
+    <h2>처음 한 번: 7단계</h2>
+    <ol class="steps">
+      <li><b>github.com</b>에 로그인하고 오른쪽 위 <b>+</b> 를 눌러 <b>New repository</b>를 고릅니다.</li>
+      <li>저장소 이름을 입력합니다(예: <code>my-app</code>). <b>Public</b>을 고르고 <b>Add a README file</b>을 체크한 뒤 <b>Create repository</b>를 누릅니다.</li>
+      <li><b>Add file → Create new file</b>을 누르고 파일 이름에 <code>index.html</code>을 입력합니다.</li>
+      <li>코드를 붙여넣습니다. 첫 배포는 아래 빈 앱 코드를 쓰고, 이후에는 내 앱 코드로 바꿉니다.</li>
+      <li>초록색 <b>Commit changes</b>를 누릅니다.</li>
+      <li><b>Settings → Pages</b>로 가서 Branch를 <code>main</code>으로 고르고 <b>Save</b>를 누릅니다.</li>
+      <li>1~2분 뒤 위쪽에 나타난 주소(<code>아이디.github.io/저장소이름</code>)를 새 탭에서 엽니다.</li>
+    </ol>
+
+    <h3>첫 배포용 빈 앱 코드</h3>
+    <div class="codeblock">
+      <button class="copy-btn" type="button">복사</button>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;우리 교실 앱&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;우리 교실 앱&lt;/h1&gt;
+  &lt;p&gt;곧 내 앱이 여기에 나타납니다!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <div class="notice"><strong>성공 기준</strong>
+    제목 글자가 인터넷 주소로 보이면 성공입니다. 밋밋해도 정상입니다.</div>
+
+    <h2>반영 시간</h2>
+    <ul>
+      <li>첫 배포: 1~2분 (가끔 더 걸립니다)</li>
+      <li>이후 수정: 보통 수십 초</li>
+      <li>안 바뀌어 보이면 <b>Ctrl+Shift+R</b>(강력 새로고침)을 누릅니다.</li>
+    </ul>
+
+    <h2>수정할 때</h2>
+    <ol>
+      <li>같은 저장소에서 <code>index.html</code>을 엽니다.</li>
+      <li>연필 아이콘(편집)을 눌러 코드를 바꿉니다.</li>
+      <li><b>Commit changes</b>를 누르면 같은 주소에 자동으로 반영됩니다.</li>
+    </ol>
+
+    <h2>체크리스트</h2>
+    <ul>
+      <li>파일 이름은 <code>index.html</code> (모두 소문자)</li>
+      <li>저장소는 <b>Public</b></li>
+      <li>Pages의 Branch는 <code>main</code></li>
+    </ul>
+    <p>잘 안 되면 <a href="troubleshoot.html">문제 해결</a>을 보세요.</p>
+    <div class="notice warn"><strong>꼭 지켜 주세요</strong>
+학생 개인정보(이름·번호·평가 결과)와 API 키·비밀번호는 앱 코드와 저장소에 넣지 않습니다.
+GitHub Pages는 <b>공개 주소</b>이고, 배포하면 코드 전체가 누구에게나 보입니다.</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="inner">화요일 바이브코딩 · 학교 동료 교사 연수 안내 · 이 사이트는 공개 주소입니다. 참가자 정보와 학생 정보는 담지 않습니다.</div>
+  </footer>
+</body>
+</html>
