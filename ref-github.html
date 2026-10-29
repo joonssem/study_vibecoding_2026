@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub을 쓸 때의 장단점 | 화요일 바이브코딩</title>
+  <meta name="description" content="교사가 GitHub Pages로 앱을 올릴 때의 장단점입니다.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <div class="inner">
+      <a class="site-title" href="index.html">화요일 바이브코딩</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">메뉴</button>
+      <nav class="site-nav" id="site-nav" aria-label="주 메뉴">
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="schedule.html">일정</a></li>
+        <li><a href="week1.html">1회차</a></li>
+        <li><a href="week2.html">2회차</a></li>
+        <li><a href="week3.html">3회차</a></li>
+        <li><a href="tools.html">도구</a></li>
+        <li><a href="deploy.html">배포 가이드</a></li>
+        <li><a href="troubleshoot.html">문제 해결</a></li>
+        <li><a href="principles.html">원칙</a></li>
+        <li><a href="next-steps.html">다음 단계</a></li>
+        <li><a href="support.html">사후 지원</a></li>
+        <li><a href="references.html">참고 자료</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+    <h1>교사가 GitHub을 쓸 때의 장단점</h1>
+    <div class="notice"><strong>먼저 밝혀 둡니다</strong>
+    아래 장단점은 대부분 교재가 직접 말한 것이 아니라 <b>작성자 판단</b>입니다. 교재와 관련된 사실만 따로 표시했습니다. 근거는 서점 목차·소개문 정리 노트뿐이고 본문은 확인하지 못했습니다. 요금·정책은 바뀔 수 있으니 공식 안내를 확인하세요.</div>
+
+    <h2>먼저 알아둘 사실</h2>
+    <ul>
+      <li>교사 대상 도서에서 GitHub 비중은 작습니다. 캔버스·캔바·앱스 스크립트는 도구 안에서 링크가 나와 GitHub이 필요 없기 때문으로 보입니다. 앱을 학급 밖으로 공개하거나 서비스처럼 키울 때 GitHub이 등장합니다. <span class="tag src">목차 근거</span> <span class="tag opinion">작성자 판단</span></li>
+      <li>『교육과정을 코드로 옮기다』 시리즈는 GitHub Pages로 <code>index.html</code>을 배포합니다. 이 연수와 같은 방식입니다. <span class="tag src">목차 근거</span></li>
+      <li>많은 책에서 GitHub은 Vercel 같은 서비스로 자동 배포하는 입구로 쓰입니다. <span class="tag src">목차 근거</span></li>
+    </ul>
+
+    <h2>장점</h2>
+    <div class="table-wrap"><table>
+<thead><tr><th>장점</th><th>설명</th></tr></thead>
+<tbody>
+<tr><td>무료이고 설치가 필요 없다</td><td>웹 화면에서 가입하고, 코드를 붙여넣고, 배포까지 끝냅니다.</td></tr>
+<tr><td>고정된 공개 주소가 생긴다</td><td>학생·동료에게 링크 하나로 공유합니다. 수정해도 주소가 그대로입니다.</td></tr>
+<tr><td>이력이 남는다</td><td>고치기 전 상태로 돌아갈 수 있어 실수가 두렵지 않습니다.</td></tr>
+<tr><td>도구와 무관하다</td><td>제미나이·ChatGPT·Claude·안티그래비티 어디서 만든 코드든 같은 방식으로 올립니다.</td></tr>
+<tr><td>다음 단계로 이어진다</td><td>이후 Vercel 같은 서비스로 옮겨 갈 때도 같은 저장소를 쓸 수 있습니다.</td></tr>
+</tbody>
+</table></div>
+
+    <h2>단점과 주의점</h2>
+    <div class="table-wrap"><table>
+<thead><tr><th>단점</th><th>설명</th></tr></thead>
+<tbody>
+<tr><td><b>코드가 공개된다</b></td><td>Public 저장소는 누구나 코드를 볼 수 있습니다. 학생 이름·번호, API 키, 비밀번호는 절대 넣지 않습니다.</td></tr>
+<tr><td><b>서버 기능이 없다</b></td><td>Pages는 정적 파일만 올립니다. 여러 사람이 같은 데이터를 보거나 AI 기능에 API 키를 쓰는 앱은 별도 구조가 필요합니다.</td></tr>
+<tr><td>용어와 화면이 낯설다</td><td>저장소(repository), Commit 같은 말과 영어 화면이 처음엔 어렵습니다.</td></tr>
+<tr><td>학교 환경에서 막힐 수 있다</td><td>가입 인증 메일 수신, 학교망에서의 접속 여부를 미리 확인해야 합니다.</td></tr>
+<tr><td>반영이 즉시 되지 않는다</td><td>첫 배포는 1~2분 걸릴 수 있고, 수정 후에는 강력 새로고침(Ctrl+Shift+R)이 필요할 수 있습니다.</td></tr>
+<tr><td>작은 실수로 404가 난다</td><td>파일명 <code>index.html</code>의 대소문자, 저장소 공개 설정, Branch 선택 등이 원인입니다.</td></tr>
+<tr><td>계정이 개인 소유다</td><td>학교 계정이 아니라 개인 계정에 앱이 쌓입니다. 이직·계정 분실 시 관리 문제가 있습니다.</td></tr>
+<tr><td>고급 기능이 많아 보인다</td><td>브랜치, Actions 등은 이 연수 범위가 아닙니다. 보이더라도 무시해도 됩니다.</td></tr>
+<tr><td>비공개 저장소는 조건이 다를 수 있다</td><td>비공개 저장소에서 Pages를 쓸 수 있는지, 조건이 무엇인지는 정책이 바뀔 수 있으니 공식 안내를 확인하세요.</td></tr>
+</tbody>
+</table></div>
+
+    <h2>그래서 어떻게 쓰나</h2>
+    <ul>
+      <li>이 연수는 <b>정적이고, 키가 없고, 학생 정보가 없는 앱</b>만 GitHub Pages에 올립니다.</li>
+      <li>이 조건을 벗어나면(데이터 공유, AI 기능, 프레임워크 사용) Pages를 넘어서는 구조가 필요합니다. 방향은 <a href="next-steps.html">다음 단계</a>에서 소개합니다.</li>
+    </ul>
+    <div class="notice warn"><strong>꼭 지켜 주세요</strong>
+학생 개인정보(이름·번호·평가 결과)와 API 키·비밀번호는 앱 코드와 저장소에 넣지 않습니다.
+GitHub Pages는 <b>공개 주소</b>이고, 배포하면 코드 전체가 누구에게나 보입니다.</div>
+    <div class="pager"><a href="ref-google.html">← 구글 도구 이유</a><a href="references.html">참고 자료 →</a></div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="inner">화요일 바이브코딩 · 학교 동료 교사 연수 안내 · 이 사이트는 공개 주소입니다. 참가자 정보와 학생 정보는 담지 않습니다.</div>
+  </footer>
+</body>
+</html>

@@ -149,3 +149,10 @@ code { font-family: var(--font-code); background: var(--color-surface); padding:
 
 .site-footer { border-top: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-muted); font-size: .92rem; }
 .site-footer .inner { max-width: var(--max-width); margin: 0 auto; padding: 16px; }
+
+/* 근거 표시 */
+.tag { display: inline-block; font-size: .8rem; font-weight: 700; line-height: 1.5; padding: 0 8px; border-radius: 999px; border: 1px solid var(--color-border); white-space: nowrap; vertical-align: 1px; }
+.tag.src { background: var(--color-surface); color: var(--color-primary); border-color: var(--color-primary); }
+.tag.opinion { background: var(--color-warn-bg); color: #6b4200; border-color: var(--color-warn-border); }
+.tag.fact { background: var(--color-primary); color: var(--color-primary-text); border-color: var(--color-primary); }
+.tag.unk { background: var(--color-bg); color: var(--color-muted); border-style: dashed; }
