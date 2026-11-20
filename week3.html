@@ -36,48 +36,72 @@
 
     <h1>3회차. Google Antigravity로 내 앱 발전시키기</h1>
     <p class="lead">2026년 11월 24일 (화) 15:00~16:00 · 5-2 교실</p>
-    <p>1회차에는 내 웹앱을 GitHub에 올렸고, 2회차에는 OpenCode로 코딩 에이전트에게 수정을 요청해 보았습니다. 3회차에는 <b>개인 Google 계정과 Google Antigravity</b>로 연수 이후에도 혼자 바이브코딩을 이어갈 수 있는 환경을 만듭니다. GitHub에서 코드를 <b>pull</b>해 수정하고 다시 <b>push</b>하는 흐름을 익힌 뒤, 교실 PC에서 개인정보와 API 키를 안전하게 다루는 방법까지 연습합니다.</p>
+    <p>1회차에는 내 웹앱을 GitHub에 올렸고, 2회차에는 OpenCode로 코딩 에이전트에게 수정을 요청해 보았습니다. 3회차에는 학교 대여 노트북(Intune 게스트 모드)에 <b>Google Antigravity</b>를 직접 설치하고, <b>개인 Gmail 계정</b>으로 로그인해 연수 이후에도 혼자 바이브코딩을 이어갈 수 있는 환경을 만듭니다. 내 GitHub의 2주차 완성본을 가져와 수정하고 다시 <b>push</b>하는 흐름을 익힌 뒤, 교실 PC에서 개인정보와 API 키를 안전하게 다루는 방법까지 연습합니다.</p>
 
     <div class="notice"><strong>오늘의 목표</strong>
-    ① 개인 Google 계정으로 Antigravity 환경을 준비합니다.<br>
-    ② 내 GitHub 저장소에서 <code>pull</code> → 바이브코딩 수정 → <code>push</code>까지 한 바퀴 완주합니다.<br>
-    ③ 필요에 따라 <b>교실 PC 로컬 JSON 저장</b> 또는 <b>안전한 Gemini API 키 연결</b>을 연습합니다.</div>
+    ① 대여 노트북(게스트 모드)에 Antigravity를 설치하고 개인 Gmail·GitHub 로그인을 마칩니다.<br>
+    ② Antigravity의 도움으로 <b>Git for Windows</b>를 설치하고, 내 GitHub의 2주차 완성본을 가져옵니다.<br>
+    ③ 바이브코딩으로 수정·확인하고 <code>push</code>까지 완주한 뒤, <b>로컬 JSON 저장</b> 또는 <b>안전한 Gemini API 키 연결</b>을 연습합니다.</div>
 
     <h2>오늘의 흐름</h2>
     <div class="table-wrap"><table>
       <thead><tr><th>분</th><th>활동</th></tr></thead>
       <tbody>
-        <tr><td class="time">0~10</td><td>개인 Google 계정으로 Antigravity 로그인 및 화면 익히기</td></tr>
-        <tr><td class="time">10~20</td><td>내 GitHub 저장소 열기 → <code>git pull</code>로 최신 코드 가져오기 및 앱 설명 확인</td></tr>
-        <tr><td class="time">20~35</td><td>고치고 싶은 점 1가지 바이브코딩 수정 → 브라우저 실행 및 오류 해결</td></tr>
-        <tr><td class="time">35~50</td><td>교실 PC 안전 활용 연습 (트랙 A: 로컬 JSON 저장 / 트랙 B: Gemini API 키 안전 보관)</td></tr>
+        <tr><td class="time">0~10</td><td>1단계: 대여 노트북(게스트 모드)에 Antigravity 설치 및 개인 Gmail 로그인</td></tr>
+        <tr><td class="time">10~15</td><td>2~3단계: GitHub 로그인 + Antigravity로 Git for Windows 확인·설치</td></tr>
+        <tr><td class="time">15~22</td><td>4단계: 내 GitHub에서 2주차 완성본 가져오기(<code>clone</code> / <code>pull</code>) 및 앱 설명 확인</td></tr>
+        <tr><td class="time">22~38</td><td>5단계: Antigravity에서 바이브코딩으로 수정하고 브라우저 실행·오류 해결</td></tr>
+        <tr><td class="time">38~50</td><td>선택 실습: 교실 PC 안전 활용 (트랙 A: 로컬 JSON 저장 / 트랙 B: Gemini API 키 안전 보관)</td></tr>
         <tr><td class="time">50~56</td><td><code>.gitignore</code>·개인정보·API 키 점검 후 <code>commit &amp; push</code>로 GitHub 반영</td></tr>
-        <tr><td class="time">56~60</td><td>고친 점과 교실 활용 계획 한 줄 나누기, 심화과정 안내</td></tr>
+        <tr><td class="time">56~60</td><td>고친 점과 교실 활용 계획 한 줄 나누기, 공용 노트북 로그아웃 및 마무리</td></tr>
       </tbody>
     </table></div>
 
     <h2>준비물</h2>
     <ul>
-      <li><b>개인 Google 계정</b> (학교 Education Plus 계정으로는 Antigravity를 쓸 수 없습니다. 2단계 인증용 휴대폰도 함께 준비해 주세요.)</li>
+      <li><b>학교 대여 노트북 (Intune 게스트 모드 로그인)</b> 또는 개인 노트북</li>
+      <li><b>개인 Gmail(Google) 계정</b> (학교 Education Plus 계정으로는 Antigravity를 쓸 수 없습니다. 2단계 인증용 휴대폰도 함께 준비해 주세요.)</li>
       <li><b>GitHub 계정</b>과 1·2회차에 만든 앱 저장소</li>
       <li>앱에서 고치거나 추가하고 싶은 점 한 가지 (예: 잘못된 그림 고치기, 게임에 선택 기능 추가하기, 연산 연습 문제 만들기)</li>
       <li><i>(트랙 B 선택 시)</i> Gemini API 키를 발급받을 수 있는 Google 계정 (교육용 계정은 기관 설정에 따라 제한될 수 있으므로 개인 계정도 함께 준비하면 안전합니다.)</li>
     </ul>
 
-    <h2>1. Antigravity 시작하고 최신 코드 가져오기 (<code>pull</code>) <small>0~20분</small></h2>
+    <h2>1. Antigravity 설치하고 개인 Gmail로 로그인하기 <small>0~10분</small></h2>
     <ol class="steps">
-      <li>Antigravity를 열고 <b>개인 Google 계정</b>으로 로그인합니다. 영어 메뉴가 낯설어도 괜찮습니다. 오늘은 ① 왼쪽 파일 목록, ② 가운데 코드·변경 확인 화면, ③ AI 대화창 세 곳만 살펴봅니다.</li>
-      <li>2회차에 내려받은 내 앱 폴더를 엽니다. 이 PC에 폴더가 없다면 AI 대화창에 GitHub 저장소 주소를 주고 먼저 <code>clone</code>을 요청합니다.</li>
-      <li>아래 요청문을 복사해 AI 대화창에 붙여넣어 최신 코드를 <code>pull</code>하고 앱 구조를 확인합니다.</li>
+      <li>학교 대여 노트북에 <b>Intune 게스트 모드</b>로 로그인합니다.</li>
+      <li>브라우저에서 <a href="https://antigravity.google/download">Google Antigravity 다운로드 페이지</a>를 열어 Windows용 설치 파일을 내려받고 설치합니다.</li>
+      <li>Antigravity를 실행한 뒤 <b>개인 Gmail 계정</b>으로 로그인합니다.</li>
+      <li>영어 메뉴가 낯설어도 괜찮습니다. 오늘은 ① 왼쪽 파일 목록, ② 가운데 코드·변경 확인 화면, ③ AI 대화창 세 곳만 살펴봅니다.</li>
     </ol>
+
+    <h2>2. GitHub에 로그인하기 <small>10~12분</small></h2>
+    <ol class="steps">
+      <li>브라우저에서 <a href="https://github.com/">GitHub</a>에 로그인합니다.</li>
+      <li>1·2회차에 작업한 <b>내 앱 저장소</b>로 들어가 주소창의 저장소 주소(예: <code>https://github.com/아이디/저장소이름</code>)를 복사해 둡니다.</li>
+    </ol>
+
+    <h2>3. Antigravity에게 Git for Windows 설치 부탁하기 <small>12~15분</small></h2>
+    <p>게스트 모드 노트북에는 Git이 설치되어 있지 않을 수 있습니다. 아래 요청문을 복사해 Antigravity AI 대화창에 붙여넣고, 실행 전 안내를 확인하며 설치를 진행합니다.</p>
     <div class="codeblock">
       <button class="copy-btn" type="button">복사</button>
-<pre><code>이 폴더가 연결된 GitHub 저장소를 확인하고, 최신 변경 사항을 git pull로 가져와 줘.
-실행 전에 명령어를 알려 주고 내 확인을 받아 줘.
+<pre><code>이 Windows PC(게스트 계정)에 Git for Windows가 설치되어 있는지 확인해 줘.
+설치되어 있지 않다면 설치 방법을 안내하고, 명령을 실행하기 전에 나에게 확인을 받아 줘.
+설치가 끝나면 Git이 정상적으로 실행되는지 버전 확인까지 해 줘.</code></pre>
+    </div>
+    <p class="muted">설치 과정에서 권한 확인 창이 뜨거나, 설치 후 Git을 인식하기 위해 Antigravity를 한 번 닫았다가 다시 열어야 할 수 있습니다.</p>
+
+    <h2>4. 내 GitHub에서 2주차 완성본 가져오기 (<code>pull</code> / <code>clone</code>) <small>15~22분</small></h2>
+    <p>2단계에서 복사한 저장소 주소를 아래 요청문에 넣어 2주차 완성본을 작업 폴더로 가져옵니다. 이 노트북에 처음 내려받을 때는 <code>clone</code>으로 가져오고, 이미 내려받은 폴더가 있을 때는 <code>pull</code>로 최신 상태를 맞춥니다.</p>
+    <div class="codeblock">
+      <button class="copy-btn" type="button">복사</button>
+<pre><code>내 GitHub 저장소 [여기에 2주차 저장소 주소 붙여넣기]의 최신 코드를 이 PC의 작업 폴더로 가져와 줘.
+이 PC에 폴더가 없으면 git clone으로 내려받고, 이미 있으면 git pull로 최신 변경 사항을 반영해 줘.
+실행 전에 저장할 폴더 위치와 명령어를 알려 주고 내 확인을 받아 줘.
 가져온 뒤에는 아직 코드를 수정하지 말고, 이 앱이 어떤 기능을 하는지와 내가 브라우저에서 실행해 확인하는 방법을 한국어로 쉽게 설명해 줘.</code></pre>
     </div>
+    <p>폴더를 가져온 뒤 Antigravity에서 해당 폴더를 열어 <code>index.html</code>이 보이는지 확인합니다.</p>
 
-    <h2>2. 바이브코딩으로 수정하고 확인하기 <small>20~35분</small></h2>
+    <h2>5. Antigravity에서 바이브코딩 진행하기 <small>22~38분</small></h2>
     <ol class="steps">
       <li><b>한 번에 한 가지</b>씩 원하는 변경 사항을 설명합니다. Antigravity가 파일 수정이나 명령 실행 승인을 물으면 내용을 한 번 읽고 허용합니다.</li>
       <li>수정이 끝나면 내 컴퓨터 브라우저에서 앱을 열어 바뀐 점과 기존 기능이 정상 작동하는지 확인합니다.</li>
@@ -98,7 +122,7 @@
 원인을 쉽게 설명하고 고쳐 줘. 내가 기대한 동작은 [원하는 결과]야.</code></pre>
     </div>
 
-    <h2>3. 교실 PC에서 안전하게 쓰기 (선택 실습) <small>35~50분</small></h2>
+    <h2>6. 교실 PC에서 안전하게 쓰기 (선택 실습) <small>38~50분</small></h2>
     <p>GitHub Pages는 누구나 볼 수 있는 공개 주소입니다. 학생 개인정보가 필요하거나 AI(API 키)를 연결하고 싶다면, <b>코드만 GitHub로 관리하고 실제 실행과 민감한 데이터·키는 내 교실 PC에만 두는 방식</b>을 연습합니다.</p>
 
     <h3>트랙 A. 개인정보가 있는 앱: 교실 PC 로컬 실행 + JSON 파일 저장</h3>
@@ -129,8 +153,8 @@ API 키가 코드나 GitHub 저장소에 절대 노출되지 않도록 내 PC의
 교실 PC에서 로컬로 실행해 안전하게 Gemini API를 호출할 수 있는 구조를 만들고, 실행 순서를 한국어로 쉽게 정리해 줘.</code></pre>
     </div>
 
-    <h2>4. 안전 점검 후 GitHub에 올리기 (<code>push</code>) <small>50~56분</small></h2>
-    <p>수정이 끝나면 <b>반드시 올라갈 파일 목록을 먼저 확인</b>합니다. 학생 데이터가 담긴 <code>.json</code> 파일이나 API 키가 들어 있는 <code>.env</code> 파일은 절대 포함되면 안 됩니다.</p>
+    <h2>7. 안전 점검 후 GitHub에 올리기 (<code>push</code>) <small>50~56분</small></h2>
+    <p>학교 대여 노트북(Intune 게스트 모드)은 로그아웃하거나 전원을 끄면 로컬 작업 폴더가 초기화될 수 있습니다. 수정한 코드는 반드시 GitHub에 <code>push</code>해 두고, 그 전에 <b>올라갈 파일 목록을 먼저 확인</b>합니다. 학생 데이터가 담긴 <code>.json</code> 파일이나 API 키가 들어 있는 <code>.env</code> 파일은 절대 포함되면 안 됩니다.</p>
     <div class="codeblock">
       <button class="copy-btn" type="button">복사</button>
 <pre><code>git status로 이번에 GitHub에 올라갈 파일 목록을 보여 주고, 바뀐 내용을 쉽게 설명해 줘.
@@ -139,10 +163,10 @@ API 키가 코드나 GitHub 저장소에 절대 노출되지 않도록 내 PC의
     </div>
     <p>GitHub 인증 창이 뜨면 브라우저에서 직접 로그인합니다. 비밀번호나 인증 코드는 AI 대화창에 입력하지 않습니다. 푸시가 끝난 뒤 GitHub 저장소에서 파일이 잘 올라갔는지, 공개 주소(정적 앱인 경우)에 반영되었는지 확인합니다. 푸시가 막히면 2회차처럼 GitHub 웹의 <b>Add file → Upload files</b>로 코드 파일만 올릴 수 있습니다.</p>
 
-    <h2>5. 마무리와 심화과정으로 이어가기 <small>56~60분</small></h2>
+    <h2>8. 마무리와 심화과정으로 이어가기 <small>56~60분</small></h2>
     <ul>
       <li>오늘 고친 점과 앞으로 교실에서 활용해 보고 싶은 장면을 한 줄씩 나눕니다.</li>
-      <li><b>공용 노트북 사용 시</b>: 마칠 때 Antigravity(Google 계정), GitHub에서 로그아웃하고, 연습용 JSON 파일이나 브라우저에 입력한 API 키를 꼭 삭제합니다.</li>
+      <li><b>대여 노트북(게스트 모드) 마무리</b>: 수정한 코드가 GitHub에 올라간 것을 확인한 뒤, Antigravity(개인 Gmail), GitHub에서 로그아웃하고 연습용 JSON 파일과 브라우저에 입력한 API 키를 꼭 삭제합니다.</li>
       <li>이 3주 과정 사이트는 다음 스터디의 기본 교재로 계속 활용하며, 교실 PC 로컬 도구·안전한 API 연동·구글 시트 연동 등 <b>심화과정</b>으로 이어갈 예정입니다. 자세한 방향은 <a href="next-steps.html">다음 단계</a>에서 확인하세요.</li>
     </ul>
 
