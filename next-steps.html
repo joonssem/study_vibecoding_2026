@@ -34,21 +34,32 @@
   </header>
   <main id="main">
 
-    <h1>다음 단계</h1>
-    <p class="lead">GitHub Pages는 <b>정적 파일</b>만 올립니다. 앱이 아래 상태가 되면 Pages를 넘어서는 것입니다.</p>
+    <h1>다음 단계와 심화과정</h1>
+    <p class="lead">3주 기본과정(1~3회차)에서 익힌 흐름을 바탕으로, 교실 상황에 맞게 아래 방향으로 발전시킬 수 있습니다.</p>
 
+    <h2>GitHub Pages와 교실 PC 확장 기준</h2>
     <div class="table-wrap"><table>
-<thead><tr><th>신호</th><th>Pages로 되는가</th><th>다음 길</th></tr></thead>
+<thead><tr><th>내 앱에 필요한 것</th><th>GitHub Pages만으로 되는가</th><th>추천하는 다음 길</th></tr></thead>
 <tbody>
-<tr><td>정적 화면, 키·학생 정보 없음</td><td>된다</td><td>그대로 사용</td></tr>
-<tr><td>여러 사람이 같은 데이터를 봐야 함</td><td>안 된다</td><td>구글 시트 + 앱스 스크립트 등 (방향만 소개)</td></tr>
-<tr><td>앱에 AI 기능(API 키)을 넣고 싶다</td><td><b>안 된다</b> (코드가 공개되므로 키를 둘 수 없음)</td><td>서버 쪽을 거치는 구조가 필요합니다. 연수에서는 경고만 합니다.</td></tr>
-<tr><td>코드 수정이 잦다</td><td>된다</td><td>안티그래비티 등 편집 도구</td></tr>
+<tr><td>정적 화면, 키·학생 정보 없음</td><td>된다</td><td>GitHub Pages 그대로 사용</td></tr>
+<tr><td>학생 이름·기록 등 개인정보 저장</td><td><b>안 된다</b> (공개 저장소 위험)</td><td><b>교실 PC 로컬 실행 + JSON 파일 저장·불러오기</b> (<code>.gitignore</code>로 데이터 제외)</td></tr>
+<tr><td>앱에 Gemini AI 기능(API 키) 넣기</td><td><b>안 된다</b> (코드 공개로 키 유출)</td><td><b>교실/개인 PC <code>.env</code> 보관 + 로컬 실행</b> 또는 서버 중계 구조</td></tr>
+<tr><td>여러 사람이 같은 데이터를 함께 봐야 함</td><td>안 된다</td><td><b>구글 시트 + Apps Script</b> 연동</td></tr>
+<tr><td>기능을 계속 고치고 이력을 관리하고 싶음</td><td>된다</td><td><b>Google Antigravity + Git (<code>pull → 수정 → push</code>)</b></td></tr>
 </tbody>
 </table></div>
 
-    <div class="notice warn"><strong>API 키는 절대 코드에 넣지 마세요</strong>
-    AI 기능을 넣고 싶어도 키를 <code>index.html</code>에 적으면 누구나 볼 수 있습니다. 필요하다면 그 방법은 연수 후 따로 상의합니다.</div>
+    <h2>심화과정 로드맵 (예정)</h2>
+    <p>이 사이트의 1~3회차 내용은 다음 스터디의 <b>기본과정</b>으로 계속 활용하며, 이후 아래 주제를 다루는 <b>심화과정</b>으로 이어갈 예정입니다.</p>
+    <ul>
+      <li><b>교실 PC 전용 학급 관리 도구 만들기</b>: 코드는 GitHub로 관리하되, 학생 데이터는 교실 PC에 JSON으로 안전하게 저장·백업하는 실전 앱 완성</li>
+      <li><b>안전한 Gemini API 활용 앱</b>: 교육용/개인 Gemini API 키를 <code>.env</code>로 로컬 보관하며 수업 자료 생성·피드백 보조 도구 만들기</li>
+      <li><b>공동 데이터 연동</b>: 구글 스프레드시트와 Apps Script를 연결해 여러 기기에서 함께 쓰는 간단한 학급 웹앱 만들기</li>
+      <li><b>Antigravity 고급 활용</b>: 여러 파일로 나뉜 프로젝트 관리, 규칙·프롬프트 재사용으로 나만의 개발 환경 다듬기</li>
+    </ul>
+
+    <div class="notice warn"><strong>API 키와 학생 데이터는 절대 GitHub에 올리지 마세요</strong>
+    AI 기능이나 학생 기록이 필요하더라도 키와 실제 데이터 파일은 코드·저장소에 넣지 않습니다. <code>.env</code>와 데이터 <code>.json</code> 파일은 반드시 <code>.gitignore</code>에 등록하고 교실/개인 PC에만 보관합니다.</div>
     <div class="notice warn"><strong>꼭 지켜 주세요</strong>
 학생 개인정보(이름·번호·평가 결과)와 API 키·비밀번호는 앱 코드와 저장소에 넣지 않습니다.
 GitHub Pages는 <b>공개 주소</b>이고, 배포하면 코드 전체가 누구에게나 보입니다.</div>
