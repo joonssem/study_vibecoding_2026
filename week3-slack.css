@@ -1,0 +1,52 @@
+﻿/* Slack-inspired styling, scoped to the week 3 lesson. */
+:root {
+  --color-primary: #4a154b;
+  --color-primary-text: #fff;
+  --color-text: #1d1d1d;
+  --color-muted: #696969;
+  --color-surface: #f9f0ff;
+  --color-border: #e6e6e6;
+  --color-code-bg: #2b1930;
+  --color-code-text: #fff;
+  --max-width: 900px;
+}
+body { font-family: Inter, Pretendard, "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif; line-height: 1.7; }
+a { color: #1264a3; }
+.site-header { background: #fff; color: #1d1d1d; border-bottom: 1px solid #e6e6e6; }
+.site-header .inner { max-width: 1240px; padding: 18px 24px; }
+.site-title { color: #4a154b; font-size: 1.2rem; letter-spacing: -.04em; }
+.site-nav a { color: #1d1d1d; }
+.site-nav a[aria-current="page"] { color: #4a154b; background: #f9f0ff; border-radius: 90px; }
+.nav-toggle { color: #4a154b; border: 1px solid #4a154b; border-radius: 90px; background: #fff; }
+main { padding: 0 24px 80px; }
+.week3-hero { position: relative; margin: 32px 0 48px; padding: clamp(32px, 6vw, 72px); border-radius: 24px; background: radial-gradient(ellipse at 100% 0%, #e9d8ff 0, transparent 48%), radial-gradient(ellipse at 0% 100%, #fff0e6 0, transparent 55%), #f4ede4; }
+.hero-eyebrow { display: inline-block; margin-bottom: 20px; padding: 6px 12px; border-radius: 90px; background: #fff; color: #4a154b; font-size: .75rem; font-weight: 700; letter-spacing: .06em; }
+h1 { max-width: 740px; font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.18; letter-spacing: -.045em; }
+.week3-hero .lead { margin: 20px 0; color: #4a154b; font-weight: 700; font-size: 1rem; }
+.week3-hero p:not(.lead) { max-width: 690px; font-size: 1.05rem; }
+.hero-action { display: inline-flex; gap: 24px; align-items: center; margin-top: 24px; padding: 14px 28px; border-radius: 90px; background: #4a154b; color: #fff; text-decoration: none; font-weight: 700; }
+.hero-action:hover { background: #611f69; }
+h2 { margin-top: 3.5rem; padding-bottom: 14px; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -.035em; border-color: #e6e6e6; scroll-margin-top: 24px; }
+h2 small { font-size: .55em; color: #696969; }
+h3 { margin-top: 2rem; font-size: 1.2rem; }
+.notice { margin: 2rem 0; padding: 28px 32px; border: 0; border-radius: 16px; background: #f4ede4; }
+.notice strong:first-child { margin-bottom: 8px; font-size: 1.25rem; }
+.notice.warn { background: #f9f0ff; border-left: 5px solid #4a154b; }
+.table-wrap { border-radius: 16px; }
+th { background: #f9f0ff; }
+th, td { padding: 14px 18px; }
+td.time { color: #4a154b; }
+ol.steps > li { margin: 1rem 0; }
+.codeblock pre { padding: 24px; border-radius: 16px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.copy-btn { border-radius: 90px; padding: 8px 18px; }
+.pager a { border-radius: 90px; color: #4a154b; padding: 12px 24px; }
+.pager a:hover { background: #f9f0ff; }
+.site-footer { background: #4a154b; color: #fff; border: 0; }
+.site-footer .inner { max-width: 900px; padding: 32px 24px; }
+@media (max-width: 767px) {
+  .site-header .inner { padding: 14px 18px; }
+  main { padding: 0 16px 56px; }
+  .week3-hero { margin: 20px 0 36px; padding: 32px 24px; border-radius: 16px; }
+  .notice { padding: 24px; }
+  .site-nav a { color: #1d1d1d; }
+}
